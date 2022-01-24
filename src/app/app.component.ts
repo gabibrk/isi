@@ -14,8 +14,8 @@ export class AppComponent implements OnInit{
   public readonly itemsToShow: number = 25;
   public itemsLength: number = 0;
   public numberToShow: any;
-  public array: any;
-  public newItemsList: any[] = [];
+  public array: number[]=[];
+  public newItemsList: item[] = [];
   public itemToPresent: item | undefined;
   public itemsDtoList:any [] = [];
   constructor(private service: ApiCallService) {
@@ -38,19 +38,21 @@ export class AppComponent implements OnInit{
     this.end = this.start + this.itemsToShow;
   }
 
-  convertToModel(items: any[]) {
+  convertToModel(items: itemDto[]):item[] {
     return items
       .map(v => ({ ...v, important: false }))
   }
 
-  setChecked(i: number) {
+  setChecked(i: number):void {
     console.log(this.newItemsList.find(item=> item.id === i));
     // this.newItemsList[i - 1].important = this.newItemsList[i - 1].important ? false : true;
-    this.newItemsList.find(item=> item.id === i).important =  this.newItemsList.find(item=> item.id === i).important ? false : true;
+    // this.newItemsList.find(item=> item.id === i).important  =  this.newItemsList.find(item=> item.id === i)?.important ? false : true;
+    let itemIndex = this.newItemsList.findIndex(item=> item.id === i );
+    this.newItemsList[itemIndex - 1].important = this.newItemsList[itemIndex - 1].important ? false : true;
     localStorage.setItem("newItemsList",  JSON.stringify(this.newItemsList));
   }
 
-  showItem(itemToPresent: item) {
+  showItem(itemToPresent: item):void {
     this.itemToPresent = itemToPresent;
   }
 
