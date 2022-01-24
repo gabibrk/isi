@@ -17,7 +17,7 @@ export class AppComponent implements OnInit{
   public array: number[]=[];
   public newItemsList: item[] = [];
   public itemToPresent: item | undefined;
-  public itemsDtoList:any [] = [];
+  public itemsDtoList:itemDto [] = [];
   constructor(private service: ApiCallService) {
     this.items$ = this.service.getPosts();
     this.items$.subscribe(res => {
