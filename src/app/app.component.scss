@@ -1,0 +1,32 @@
+.container{
+    border:1px solid silver;
+    width:70%;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.flexContianer{
+    display: flex;
+}
+.item-list{
+    cursor: pointer;
+}
+.flex{
+
+    display: flex;
+}
+
+.pgn-container{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.pgn{
+    border: 1px solid rebeccapurple;
+    border-radius: 25%;
+    margin-left: 0.5rem;
+    padding: 0.2rem;
+    cursor: pointer;
+}
