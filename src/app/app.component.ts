@@ -48,7 +48,7 @@ export class AppComponent implements OnInit{
     // this.newItemsList[i - 1].important = this.newItemsList[i - 1].important ? false : true;
     // this.newItemsList.find(item=> item.id === i).important  =  this.newItemsList.find(item=> item.id === i)?.important ? false : true;
     let itemIndex = this.newItemsList.findIndex(item=> item.id === i );
-    this.newItemsList[itemIndex - 1].important = this.newItemsList[itemIndex - 1].important ? false : true;
+    this.newItemsList[itemIndex ].important = this.newItemsList[itemIndex ].important ? false : true;
     localStorage.setItem("newItemsList",  JSON.stringify(this.newItemsList));
   }
 

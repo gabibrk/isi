@@ -3,7 +3,7 @@
   <div class='flexContianer'  >
   <div class='pagination' *ngIf="(items$ | async ) as items " >
     <div *ngFor="let item of newItemsList | slice:start:end"  class='flex' > 
-      <input type="checkbox" (click)="setChecked(item.id)"> <div [ngStyle]="item.important?{'color': 'red'} : {'color': 'blue'}" class='item-list' (click)="showItem(item)">{{item.title}}</div>
+      <input type="checkbox" [checked]="item.important" (click)="setChecked(item.id)"> <div [ngStyle]="item.important?{'color': 'red'} : {'color': 'blue'}" class='item-list' (click)="showItem(item)">{{item.title}}</div>
     </div>
     <div class='flex pgn-container'>
     <div class='pgn' *ngFor= "let i of array" (click)="setContent(i)">{{i+1}}</div>
