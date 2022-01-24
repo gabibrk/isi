@@ -4,12 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PaginatorComponent } from './paginator/paginator.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PaginatorComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
