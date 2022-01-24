@@ -28,9 +28,13 @@
     border-radius: 25%;
     margin-left: 0.5rem;
     padding: 0.2rem;
+    color:#000;
     cursor: pointer;
 }
-
+.pgn:hover{
+    background-color: rgb(150, 25, 199);
+    color:#fff
+}
 
 .button {
   align-items: center;
